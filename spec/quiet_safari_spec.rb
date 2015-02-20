@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+require 'tzinfo'
 require 'rails'
 require 'rails/all'
 

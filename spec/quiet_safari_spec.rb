@@ -19,10 +19,7 @@ RSpec.describe QuietSafari do
   let(:request)  { Rack::MockRequest.env_for(path) }
   let(:response) { StringIO.new }
 
-  before do
-    Rails.logger = Logger.new(response)
-    Rails.logger.formatter = lambda { |s, d, p, m| "#{m}\n" }
-  end
+  before { Rails.logger = Logger.new(response) }
 
   shared_examples_for 'a quiet request' do
     before { app.config.quiet_safari = true }

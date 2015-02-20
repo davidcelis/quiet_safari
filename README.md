@@ -1,4 +1,4 @@
-# QuietSafari
+# QuietSafari [![Build Status](https://travis-ci.org/davidcelis/quiet_safari.svg)](https://travis-ci.org/davidcelis/quiet_safari)
 
 Because who cares if Safari can't find `apple-touch-icon.png`?
 

@@ -20,4 +20,8 @@ DESCRIPTION
   spec.files         = Dir['lib/**/*.rb']
   spec.test_files    = Dir['spec/**/*.rb']
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'railties', '>= 3.1.0'
+
+  spec.add_development_dependency 'rspec', '~> 3.2'
 end

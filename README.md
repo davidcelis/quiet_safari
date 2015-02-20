@@ -7,7 +7,7 @@ Because who cares if Safari can't find `apple-touch-icon.png`?
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'quiet_safari'
+gem 'quiet_safari', group: :development
 ```
 
 And then execute:

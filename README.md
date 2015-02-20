@@ -22,7 +22,6 @@ That's it. Be at peace, knowing you can read your development log without seeing
 
 ```
 Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2015-02-20 09:49:14 -0800
-** [Raven] User excluded error: #<ActionController::RoutingError: No route matches [GET] "/apple-touch-icon.png">
 
 ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
   vendor/bundle/gems/actionpack-3.2.20/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'

@@ -18,7 +18,7 @@ DESCRIPTION
   spec.license       = 'MIT'
 
   spec.files         = Dir['lib/**/*.rb']
-  spec.test_files    = Dir['spec/**/*.rb']
+  spec.test_files    = Dir['test/**/*.{rb,gemfile}']
   spec.require_paths = ['lib']
 
   spec.add_dependency 'railties', '>= 3.1.0'

@@ -1,6 +1,6 @@
 language: ruby
 
-script: bundle exec rake
+script: bundle exec ruby test/quiet_safari_test.rb
 
 rvm:
   - 1.9.3

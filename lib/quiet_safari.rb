@@ -3,12 +3,12 @@ require 'logger'
 
 module QuietSafari
   class Engine < ::Rails::Engine
+    config.quiet_safari = true
+
     APPL = /apple-touch-icon(-precomposed)?\.png/
     KEY = 'quiet_safari.old_rails_log_level'
 
     initializer 'quiet_safari' do |app|
-      app.config.quiet_safari = true
-
       next if Rails::Rack::Logger.instance_methods.include?(:call_with_quiet_safari)
 
       Rails::Rack::Logger.class_eval do

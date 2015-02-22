@@ -23,5 +23,5 @@ DESCRIPTION
 
   spec.add_dependency 'railties', '>= 3.1.0'
 
-  spec.add_development_dependency 'rspec', '~> 3.2'
+  spec.add_development_dependency 'minitest'
 end

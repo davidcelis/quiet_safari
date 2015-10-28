@@ -5,7 +5,7 @@ module QuietSafari
   class Engine < ::Rails::Engine
     config.quiet_safari = true
 
-    APPL = /apple-touch-icon(-precomposed)?\.png/
+    APPL = /apple-touch-icon(-precomposed)?.*/
     KEY = 'quiet_safari.old_rails_log_level'
 
     initializer 'quiet_safari' do |app|
@@ -14,7 +14,7 @@ module QuietSafari
       Rails::Rack::Logger.class_eval do
         def call_with_quiet_safari(env)
           begin
-            if Rails.application.config.quiet_safari && env['PATH_INFO'] =~ APPL
+            if Rails.application.config.quiet_safari and env['PATH_INFO'] =~ APPL
               env[KEY]           = Rails.logger.level
               Rails.logger.level = Logger::UNKNOWN
             end

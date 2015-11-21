@@ -45,8 +45,20 @@ class QuietSafariTest < QuietSafari::TestCase
     assert_empty log.string
   end
 
+  def test_requesting_apple_touch_icon_152_quiet
+    get '/apple-touch-icon-152x152.png'
+
+    assert_empty log.string
+  end
+
   def test_requesting_apple_touch_icon_precomposed_quiet
     get '/apple-touch-icon-precomposed.png'
+
+    assert_empty log.string
+  end
+
+  def test_requesting_apple_touch_icon_precomposed_quiet
+    get '/apple-touch-icon-152x152-precomposed.png'
 
     assert_empty log.string
   end

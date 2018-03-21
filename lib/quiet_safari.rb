@@ -5,7 +5,7 @@ module QuietSafari
   class Engine < ::Rails::Engine
     config.quiet_safari = true
 
-    APPL = /apple-touch-icon(-precomposed)?\.png/
+    APPL = /apple-touch-icon(?:-\d+x\d+)?(?:-precomposed)?\.png/
     KEY = 'quiet_safari.old_rails_log_level'
 
     initializer 'quiet_safari' do |app|

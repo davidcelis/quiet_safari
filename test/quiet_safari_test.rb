@@ -45,10 +45,26 @@ class QuietSafariTest < QuietSafari::TestCase
     assert_empty log.string
   end
 
+  def test_requesting_apple_touch_icon_sizes_quiet
+    ['120', '152'].each do |size|
+      get "/apple-touch-icon-#{size}x#{size}.png"
+
+      assert_empty log.string
+    end
+  end
+
   def test_requesting_apple_touch_icon_precomposed_quiet
     get '/apple-touch-icon-precomposed.png'
 
     assert_empty log.string
+  end
+
+  def test_requesting_apple_touch_icon_sizes_precomposed_quiet
+    ['120', '152'].each do |size|
+      get "/apple-touch-icon-#{size}x#{size}-precomposed.png"
+
+      assert_empty log.string
+    end
   end
 
   def test_multithreaded
